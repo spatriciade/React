@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="title"></div>
+    <div id="subtitle"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- Adding Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      let root = ReactDOM.createRoot(document.querySelector("#root"));
+      function RandomNumber() {
+        const getRandomNumber = () => {
+          return Math.floor(Math.random() * 6);
+        };
+        return (
+          <div
+            style={{
+              width: "60%",
+              margin: "2em auto",
+              background: "dodgerblue",
+              color: "white",
+              padding: "2em",
+              textAlign: "center",
+              fontSize: "1.5rem",
+            }}
+          >
+            here is the number:{" "}
+            <span
+              style={{
+                color: "black",
+                fontWeight: "bold",
+                marginLeft: "25px",
+              }}
+            >
+              {getRandomNumber()}
+            </span>
+          </div>
+        );
+      }
+      root.render(<RandomNumber />);
+    </script>
+
+    <!-- //let h1 = React.createElement("h1",null,"Hello World!"); -->
+
+    <!-- let h1 = React.createElement(                                                                                                            -->
+
+    <!-- "h1", -->
+
+    <!-- { -->
+
+    <!-- className: "title", -->
+
+    <!-- }, -->
+
+    <!-- "Hello World!!!!" -->
+
+    <!-- ); -->
+
+    <!-- //ReactDOM.render(h1, document.querySelector("#root")); -->
+
+    <!-- let root = ReactDOM.createRoot(document.querySelector("#title")); -->
+
+    <!-- root.render(h1); -->
+
+    <!-- let root2 = ReactDOM.createRoot(document.querySelector("#subtitle")); -->
+
+    <!-- root2.render( -->
+
+    <!-- React.createElement("h2",{ -->
+
+    <!-- className:"subtitle" -->
+
+    <!-- },"React in action")); -->
+  </body>
+</html>
