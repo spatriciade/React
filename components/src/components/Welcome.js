@@ -5,7 +5,7 @@ import Person from "./Person";
 
 function Welcome(props) {
     const data ={
-        dni: Math.ceil(Math.random())+String.fromCharCode(Math.floor(Math.random() * 122) + 65),
+        dni: Math.random().toString().substring(2, 10) + String.fromCharCode(Math.floor((Math.random() * 90) + 65)).toUpperCase(),
       userName:props.userName,
     } 
  
