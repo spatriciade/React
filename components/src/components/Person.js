@@ -1,6 +1,6 @@
 import './Person.css';
 
-function Persons(props) {
+function Person(props) {
   return (
 <div>
 <ul>
@@ -11,4 +11,4 @@ function Persons(props) {
   );
 }
 
-export default Persons;
+export default Person;

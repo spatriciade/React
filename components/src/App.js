@@ -3,9 +3,10 @@ import Welcome from './components/Welcome';
 
 
 function App() {
-   const today = new Date(Date.now()).toLocaleDateString();
+  const today = new Date(Date.now()).toLocaleDateString();
+
   return (
-    <div className= "main">
+    <div class= "main">
       <Welcome userName="Patricia" today={today} />
       <Welcome userName="Silvia" today={today} />
       <Welcome userName="World" today={today} />
