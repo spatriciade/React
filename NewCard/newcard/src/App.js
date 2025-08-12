@@ -1,0 +1,60 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar, faEnvelope, faDollarSign,faAddressBook,faPhoneFlip,faCircleCheck} from "@fortawesome/free-solid-svg-icons";
+// import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import "./App.css";
+import CardWrapper from "./components/CardWrapper";
+import freelancer1 from "./assets/img/freelancer1.jpg";
+
+function App() {
+  return (
+    <CardWrapper>
+      <div className="img-container">
+        <div className="img-wrapper">
+          <img src={freelancer1} alt="freenlancer-one" />
+          <span className="dot"></span>
+        </div>
+      </div>
+      <div className="info-container">
+        <h3>MRS ROBERT</h3>
+        <p>UI/UX Designer</p>
+        <div className="hire">
+          <div>
+            Rate: <span>$85/hr</span>
+          </div>
+          <button className="hire-btn">Hire Me</button>
+        </div>
+        <div className="rating">
+          <div>5.0</div>
+          <div>
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+          </div>
+          <div>(105 reviews)</div>
+        </div>
+        <div className="icons">
+          <div className="verified">
+           <FontAwesomeIcon icon={faCircleCheck} />
+            <span>Verified</span>
+          </div>
+          <span>
+            <FontAwesomeIcon icon={faDollarSign} />
+                      </span>
+                      <span><FontAwesomeIcon icon={faEnvelope} /> 
+                      </span>
+                      <span>
+            <FontAwesomeIcon icon={faAddressBook} />
+                      </span>
+                      <span>
+           <FontAwesomeIcon icon={faPhoneFlip} />
+                      </span>
+        </div>
+      </div>    
+      
+    </CardWrapper>
+  );
+}
+
+export default App;
