@@ -1,35 +1,71 @@
-:root{
+:root {
   box-sizing: border-box;
   font-size: 0.785em;
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --success: #198754;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #0dcaf0;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --white: #ffffff;
+  --black: #000000;
+  --pink: #d63384;
+  --purple: #6f42c1;
+  --orange: #fd7e14;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --indigo: #6610f2;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
 }
-*,::after,::before{
+
+*,
+::after,
+::before {
   box-sizing: inherit;
-   margin: 0;
-    padding: 0;
-    border: 0;
-    outline: none 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none 0;
 }
-body{
-  font-family: 'Rubik',sans-serif;
+
+body {
+  font-family: 'Rubik', sans-serif;
 }
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Titillium Web',sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Titillium Web', sans-serif;
 }
-h1{
+
+h1 {
   font-size: 3.5rem;
 }
-h2{
+
+h2 {
   font-size: 2.25rem;
 }
-h3{
+
+h3 {
   font-size: 1.5rem;
 }
-h4{
+
+h4 {
   font-size: 1.1rem;
 }
-h5{
+
+h5 {
   font-size: 0.9rem;
 }
-h6{
+
+h6 {
   font-size: 0.7rem;
 }

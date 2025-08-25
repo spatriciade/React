@@ -1,4 +1,4 @@
-.rocket {
+/* .rocket {
   width: 100px;
   height: 100px;
   display: flex;
@@ -27,7 +27,7 @@
 .rocket.red {
   background-color: red;
 }
-
-.rocket.launch {
-  bottom: 100vh; /* sale volando hacia arriba */
-}
+/* sale volando hacia arriba */
+/* .rocket.launch {
+  bottom: 100vh; 
+} */
