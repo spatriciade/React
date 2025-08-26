@@ -1,0 +1,170 @@
+/* Título página */
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #0800ff, #e52e71);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Subtítulo “Películas” */
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e52e71;
+  text-align: center;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #ff5722;
+  margin: 8px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+/* Botones */
+.button {
+  padding: 8px 16px;
+  margin: 4px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+font-family: fantasy, bold, cursive;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+/* Colores por género */
+.button-all {
+  background-color: #9e9e9e;
+}
+.button-all:hover {
+  background-color: #757575;
+}
+
+.button-comedy {
+  background-color: #4caf50;
+}
+.button-comedy:hover {
+  background-color: #45a049;
+}
+
+.button-drama {
+  background-color: #2196f3;
+}
+.button-drama:hover {
+  background-color: #1976d2;
+}
+
+.button-action {
+  background-color: #f44336;
+}
+.button-action:hover {
+  background-color: #d32f2f;
+}
+
+.button-adventure {
+  background-color: #ff9800;
+}
+.button-adventure:hover {
+  background-color: #fb8c00;
+}
+
+.button-thriller {
+  background-color: #9c27b0;
+}
+.button-thriller:hover {
+  background-color: #7b1fa2;
+}
+
+.button-documentary {
+  background-color: #3f51b5;
+}
+.button-documentary:hover {
+  background-color: #303f9f;
+}
+
+.button-fantasy {
+  background-color: #00bcd4;
+}
+.button-fantasy:hover {
+  background-color: #0097a7;
+}
+
+.button-sci-fi {
+  background-color: #e91e63;
+}
+.button-sci-fi:hover {
+  background-color: #c2185b;
+}
+
+/* Lista de películas */
+.movie-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Cada card de película */
+.movie-card {
+  flex: 1 1 calc(33% - 16px);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  background-color: #fefefe;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 4px 4px 20px rgba(0,0,0,0.25);
+}
+
+/* Imagen de la película */
+.movie-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  object-fit: cover;
+}
+
+/* Título y género dentro de cada card */
+.movie-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #333;
+  text-align: center;
+font-family: fantasy, bold, cursive;
+}
+
+.movie-genre {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 4px;
+  text-align: center;
+font-family: fantasy, bold, cursive;
+}
