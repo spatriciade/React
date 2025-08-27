@@ -1,0 +1,26 @@
+.card{
+    border: 1px solid #e5e5e5;
+    border-radius: .3rem;
+    padding: .5em 1em;
+    margin: 2em 0;
+    background-color: oldlace;
+    opacity: 0;    
+    transition: opacity .3s ease-out;
+
+}
+.card h2{
+    font-size: 2rem;
+    background-color: #282828;
+    color: oldlace;
+    padding: .5em;
+    border-radius: .3rem;
+
+}
+.card h3{
+    color:red;
+    margin-left: .5em;
+}
+.card.fade-in{
+    opacity: 1;
+    /* transition: opacity .3s ease-out; */
+}
