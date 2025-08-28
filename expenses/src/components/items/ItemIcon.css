@@ -1,51 +1,46 @@
-.item-icon {
+.item-icon{
     flex-basis: 15%;
 }
-/* icon Stacks */
-.incoming {
-    color: #3772a9
+/* Icon stacks */
+.incoming{
+    color: #3772a9;
 }
-
-.light-incoming {
-    color: #eaf1f8
+.light-incoming{
+    color: #eafaf8;
 }
-
-.transfer {
-    color: #6465d8
+.transfer{
+    color: #6465d8;
 }
-
-.light-transfer {
+.light-transfer{
     color: #eeeffc;
 }
-
-.car {
-    color: #48a6e2
+.cart{
+    color: #48a6e2;
 }
-
-.light-car {
+.light-cart{
     color: #ecc5fe;
 }
-
-.bizum {
+.bizum{
     color: #33d3d8;
 }
-
-.light-bizum {
+.light-bizum{
     color: #eeeffc;
 }
-
-.bill {
+.bill{
     color: #d977eb;
 }
-
-.light-bill {
+.light-bill{
     color: #f8f2fd;
 }
-
-.electricity {
+.electricity{
     color: #fac904;
 }
-
-.light-electricity {
+.light-electricity{
     color: #edfaf8;
+}
+.insurance {
+    color: #fdfcff;
+}
+.light-insurance {
+    color: #04add0;
 }

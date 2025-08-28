@@ -1,28 +1,36 @@
 import "./ItemCost.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faArrowDownLong,
   faArrowUpLong,
+  faArrowDownLong,
 } from "@fortawesome/free-solid-svg-icons";
 
+const sing = {
+  plus: {
+    entity: "&#43",
+    unicode: "\u002b",
+  },
+  minus: {
+    entity: "&#8722",
+    unicode: "\u2212",
+  },
+};
+
 function ItemCost(props) {
-
-  const sign={
-    plus:{
-      entity:'&#43;',
-      unicode:'\u002b',
-    },
-   
-    minus:{
-      entity:'&#8722;',
-      unicode:'\u2212',
-    }
-  };
-
   return (
-    <div className="item-cost flex-20 expense fa-3x flex-center">
-      <span>{(props.money.income && sign.plus.unicode) ||( sign.minus.unicode + `${props.money.amount}`)}</span>
-      <FontAwesomeIcon icon={(props.money.income && faArrowUpLong) || (faArrowDownLong)} className="m-left-20" />
+    <div
+      className={`item-cost flex-20 ${
+        (props.money.income && "income") || "expense"
+      } fa-3x flex-center`}
+    >
+      <span>
+        {(props.money.income && sing.plus.unicode) || sing.minus.unicode}$
+        {props.money.amount}
+      </span>
+      <FontAwesomeIcon
+        icon={(props.money.income && faArrowUpLong) || faArrowDownLong}
+        className="m-left20"
+      />
     </div>
   );
 }
