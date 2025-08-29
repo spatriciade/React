@@ -43,7 +43,7 @@ export const itemsList = [
     classes: classes.bill,
     data: {
       title: "Food & Drinks",
-      date: new Date("2025-08-24").toLocaleDateString(),
+      date: new Date("2022-08-24").toLocaleDateString(),
     },
     money: {
       amount: 20,
@@ -55,7 +55,7 @@ export const itemsList = [
     classes: classes.incoming,
     data: {
       title: "Freelancing Work",
-      date: new Date("2025-08-31").toLocaleDateString(),
+      date: new Date("2022-08-31").toLocaleDateString(),
     },
     money: {
       amount: 260,
@@ -67,7 +67,7 @@ export const itemsList = [
     classes: classes.bizum,
     data: {
       title: "Send Bizum to friend",
-      date: new Date("2025-09-01").toLocaleDateString(),
+      date: new Date("2022-09-01").toLocaleDateString(),
     },
     money: {
       amount: 50,
@@ -79,7 +79,7 @@ export const itemsList = [
     classes: classes.transfer,
     data: {
       title: "Payroll",
-      date: new Date("2025-09-01").toLocaleDateString(),
+      date: new Date("2022-09-01").toLocaleDateString(),
     },
     money: {
       amount: 2500,

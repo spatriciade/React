@@ -13,11 +13,11 @@ import ItemCost from "./items/ItemCost";
 import { itemsList, classes } from "../itemsDB/Items";
 import ItemContainer from "./wrappers/ItemContainer";
 import Wrapper from "./wrappers/Wrapper";
-// import { useState, useEffect } from "react";
-// import ExpensesFilter from "./ExpensesFilter";
-// import { expensesStats } from "../utils/expensesStats";
-// import { monthToString } from "../utils/monthToString";
-// import InfoAlert from "./alerts/InfoAlert";
+import { useState, useEffect } from "react";
+import ExpensesFilter from "./ExpensesFilter";
+import { expensesStats } from "../utils/expensesStats";
+import { monthToString } from "../utils/monthToString";
+import InfoAlert from "./alerts/InfoAlert";
 
 function Expenses(props) {
   const [filter, setFilter] = useState(
