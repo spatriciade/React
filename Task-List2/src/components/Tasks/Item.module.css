@@ -1,0 +1,7 @@
+.alert{
+    width: 100%;
+    background-color: #99CC33;
+    border: 1px solid #6BB048;
+    padding: 0.5em 1em;
+    font-size: 2.5rem;
+}
