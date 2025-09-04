@@ -1,9 +1,13 @@
 // import './App.css';
+// import React from 'react';
+
+import {Fragment}from 'react';
+
 
 function App() {
   return (
-    <div>
-      <h1>Hello, World!</h1>
+    <Fragment>
+        <h1>Hello, World!</h1>
       <p>ipsum dolor sit amet, consectetur adipiscing elit. Sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
         minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
@@ -12,7 +16,7 @@ function App() {
         sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
-    </div>
+    </Fragment>
   );
 }
 
