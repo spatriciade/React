@@ -23,7 +23,15 @@ function TextInputWithFocusButton() {
         type="text"
         style={{ width: "100%", padding: ".5em 1em", marginBottom: "1em" }}
       />
-      <button onClick={ClickHandle} style={{ width: "100%", padding: ".5em .8em",borderRadius:".5rem",backgroundColor:"dodgerblue"}}>
+      <button
+        onClick={ClickHandle}
+        style={{
+          width: "100%",
+          padding: ".5em .8em",
+          borderRadius: ".5rem",
+          backgroundColor: "dodgerblue",
+        }}
+      >
         Focus the input
       </button>
     </form>
