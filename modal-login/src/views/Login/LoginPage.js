@@ -44,6 +44,38 @@ function LoginPage() {
     setVisible(!visible)
   };
 
+  // Refactorizado
+//   const handlerVisibility = (loginData) => {
+//   const isValid =
+//     loginData &&
+//     validateEmail(loginData.email) &&
+//     validatePassword(loginData.password);
+
+//   const loginStatus = isValid
+//     ? {
+//         loggedIn: true,
+//         loginHeader: "Login successfully",
+//         loginMessage: "You have been logged in successfully",
+//       }
+//     : {
+//         loggedIn: false,
+//         loginHeader: "Login failed",
+//         loginMessage: "Wrong email or password",
+//       };
+
+//   setLoginInfo({
+//     ...loginStatus,
+//     email: loginData.email,
+//     password: loginData.password,
+//     rememberMe: loginData.rememberMe,
+//   });
+
+//   console.log(isValid ? "Login successful" : "Login failed");
+
+//   setVisible((prev) => !prev);
+// };
+
+
   return (
     <>
       {ReactDOM.createPortal(
