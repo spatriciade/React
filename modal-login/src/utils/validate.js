@@ -34,3 +34,10 @@ export const validatePassword = (password) => {
   console.log("password is invalid");
   return false;
 };
+//validar longitud del password entre 8 y 15 caracteres
+const validatePasswordLength = (password) => {
+  if (password.length >= 8 && password.length <= 15) {
+    return false;
+  }
+  return true;
+};
