@@ -2,9 +2,9 @@ import classes from "./LoginForm.module.css";
 import { useRef } from "react";
 
 function LoginForm(props) {
-const refEmail = useRef("");
-const refPassword = useRef("");
-const refCheckbox = useRef(false);
+  const refEmail = useRef("");
+  const refPassword = useRef("");
+  const refCheckbox = useRef(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,17 +16,17 @@ const refCheckbox = useRef(false);
     props.onLogin(loginData);
   };
 
-
-
   return (
     <form onSubmit={handleSubmit}>
-      <input ref={refEmail}
+      <input
+        ref={refEmail}
         type="text"
         name="username"
         placeholder="E-mail Address"
         className={classes["form-control"]}
       />
-      <input ref={refPassword}
+      <input
+        ref={refPassword}
         type="password"
         name="password"
         placeholder="Password"
