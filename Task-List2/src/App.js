@@ -4,12 +4,15 @@ import TasksInput from "./components/Tasks/TasksInput";
 import classes from "./App.module.css";
 import HourGlass from "./components/UI/Spinners/HourGlass";
 
-const BASE_URL = "https://task-list-fs-default-rtdb.europe-west1.firebasedatabase.app/"
+const BASE_URL = "https://task-list-fs-default-rtdb.europe-west1.firebasedatabase.app/";
+
+// 👇 tiempo de carga en milisegundos
+const SPINNER_DELAY = 2000;
 
 const App = () => {
-  const [tasks, setNewTask] = useState({});
+  const [tasks, setNewTask] = useState(null);
   const [pending, setPending] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState(null);
 
   const fetchTasksHandler = async (
     method = "GET",
@@ -19,60 +22,46 @@ const App = () => {
       setPending(true);
       setError(null);
 
-      let response = null;
+      let response;
 
       if (method === "DELETE") {
-        response = await fetch(
-          BASE_URL + "tasks/"+
-            task.id +
-            ".json",
-          { method }
-        );
+        response = await fetch(BASE_URL + "tasks/" + task.id + ".json", {
+          method,
+        });
       } else if (method === "PATCH") {
-        response = await fetch(
-          BASE_URL + "tasks/"+
-            task.id +
-            ".json",
-          {
-            method,
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ title: task.text }),
-          }
-        );
+        response = await fetch(BASE_URL + "tasks/" + task.id + ".json", {
+          method,
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ title: task.text }),
+        });
+      } else if (method === "POST") {
+        response = await fetch(BASE_URL + "tasks.json", {
+          method,
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ title: task.text }),
+        });
       } else {
-        response = await fetch(
-          BASE_URL + "tasks.json",
-          {
-            method,
-            headers: {
-              "Content-Type": method !== "GET" ? "application/json" : "",
-            },
-            body: method !== "GET" ? JSON.stringify({ title: task.text }) : null,
-          }
-        );
+        // GET
+        response = await fetch(BASE_URL + "tasks.json");
       }
 
-      // console.log(response);
+      if (!response.ok) throw new Error("Request failed!");
 
-      if (response.ok) {
-        const data = await response.json();
+      const data = await response.json();
+
+      // 👇 usamos la constante SPINNER_DELAY
+      setTimeout(() => {
         if (method === "GET") {
           setNewTask(data);
         } else {
-          fetchTasksHandler();
+          fetchTasksHandler(); // recargar lista después de POST, PATCH o DELETE
         }
-        // setNewTask(data);
-        // console.log(data);
-      }
+        setPending(false);
+      }, SPINNER_DELAY);
     } catch (error) {
-      setError({
-        message: error.message || "Something went wrong",
-      });
+      setError({ message: error.message || "Something went wrong" });
+      setPending(false);
     }
-
-    setPending(false);
   };
 
   useEffect(() => {
@@ -96,7 +85,7 @@ const App = () => {
       <section className={classes["task-form"]}>
         <TasksInput onAddTask={addTaskHandler} />
       </section>
-      {pending === true && <HourGlass />}
+      {pending && <HourGlass />}
       <section className={classes["tasks-content"]}>
         {!pending && tasks !== null && error === null && (
           <TaskList
@@ -114,7 +103,7 @@ const App = () => {
               backgroundColor: "#99cc33",
             }}
           >
-            No tasks availables. Add one?
+            No tasks available. Add one?
           </h2>
         )}
         {!pending && error !== null && (
@@ -122,8 +111,9 @@ const App = () => {
             style={{
               textAlign: "center",
               padding: "1em",
-              border: "1px solid #339900",
-              backgroundColor: "#99cc33",
+              border: "1px solid #cc0000",
+              backgroundColor: "#ff6666",
+              color: "#fff",
             }}
           >
             {error.message}
@@ -135,3 +125,5 @@ const App = () => {
 };
 
 export default App;
+
+
