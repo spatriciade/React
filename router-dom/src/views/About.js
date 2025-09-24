@@ -1,18 +1,20 @@
-// import "./About.css";
-import {useParams} from "react-router-dom";
+//import "./About.css";
+import { useParams } from "react-router-dom";
+
 
 function About() {
-  const { id } = useParams();
-  console.log(id );
+  const {id} = useParams ()
+  console.log(id);
   
-
   return (
     <>
-      <h2>About Page</h2>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-{id && <p>ID: {id}</p>}
-</>
+      <h2>About</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione,
+        accusamus.
+      </p>
+      {id && <p>Id: {id}</p>}
+    </>
   );
 }
 

@@ -1,14 +1,17 @@
-// import "./About.css";
+//import "./NewAbout.css";
+import { useParams } from "react-router-dom";
 
 function NewAbout() {
 
-
   return (
     <>
-      <h2>New About Page</h2>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</>
+      <h2>New About</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione,
+        accusamus.
+      </p>
+      
+    </>
   );
 }
 
